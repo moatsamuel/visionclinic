@@ -5,7 +5,7 @@ from pkg import app
 def home():
     return render_template("index.html")
 
-@app.route("/doctors")
+@app.route("/doctor")
 def doctors():
     return render_template("doctor.html")
 
