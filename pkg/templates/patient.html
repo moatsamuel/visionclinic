@@ -1,0 +1,161 @@
+
+{% extends "master.html" %} 
+
+{% block title %}
+Patient page
+{% endblock %}
+
+    <!-- Main Layout -->
+    <div class="flex min-h-screen">
+
+        <!-- Sidebar -->
+        <aside class="w-64 bg-white border-r border-slate-200 p-5 hidden md:block">
+
+            <p class="text-xs text-slate-400 uppercase tracking-wider mb-6">Patient Menu</p>
+
+            <nav class="space-y-2">
+
+                <a href="patient.html" class="block bg-indigo-950 text-white rounded-xl px-4 py-3">Dashboard</a>
+
+                <a href="appointment.html" class="block text-slate-600 hover:bg-slate-100 rounded-xl px-4 py-3 transition">My Appointment</a>
+
+                <a href="doctor.html" class="block text-slate-600 hover:bg-slate-100 rounded-xl px-4 py-3 transition">Doctors</a>
+
+                <a href="medical-record.html" class="block text-slate-600 hover:bg-slate-100 rounded-xl px-4 py-3 transition">Medical Records</a>
+
+                <a href="document.html" class="block text-slate-600 hover:bg-slate-100 rounded-xl px-4 py-3 transition">Documents</a>
+
+                <a href="notification.html" class="block text-slate-600 hover:bg-slate-100 rounded-xl px-4 py-3 transition">Notifications</a>
+
+                <a href="profile.html" class="block text-slate-600 hover:bg-slate-100 rounded-xl px-4 py-3 transition">Profile</a>
+
+                <a href="index.html"class="flex items-center gap-3 text-slate-600 hover:bg-slate-100 rounded-xl px-4 py-3 transition">🏠<span>Home</span></a>
+            </nav>
+            <!-- Logout -->
+            <div class="border-t border-slate-200 mt-8 pt-5">
+                <a href="login.html" class="block text-red-500 hover:bg-red-50 rounded-xl px-4 py-3 transition">Logout</a>
+            </div>
+        </aside>
+        <!-- Patient Content -->
+        <main class="flex-1 p-6 md:p-8">
+            <!-- Welcome -->
+            <section class="mb-8">
+                <h2 class="text-3xl font-bold text-slate-800">Welcome, Peace 👋</h2>
+                <p class="text-slate-500 mt-2">Here's an overview of your clinic activities.</p>
+
+            </section>
+            <!-- Summary Cards -->
+            <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-8">
+
+                <a href="appointment.html" class="bg-white border border-slate-200 rounded-2xl p-5 hover:shadow-md transition">
+
+                    <p class="text-sm text-slate-500">Upcoming Appointments</p>
+
+                    <h3 class="text-3xl font-bold text-slate-800 mt-2">3</h3></a>
+
+
+                <a href="medical-record.html" class="bg-white border border-slate-200 rounded-2xl p-5 hover:shadow-md transition">
+
+                    <p class="text-sm text-slate-500">Medical Records</p>
+
+                    <h3 class="text-3xl font-bold text-slate-800 mt-2">5</h3></a>
+
+
+                <a href="document.html" class="bg-white border border-slate-200 rounded-2xl p-5 hover:shadow-md transition">
+
+                    <p class="text-sm text-slate-500">Documents</p>
+
+                    <h3 class="text-3xl font-bold text-slate-800 mt-2">8</h3></a>
+
+
+                <a href="notification.html" class="bg-white border border-slate-200 rounded-2xl p-5 hover:shadow-md transition">
+
+                    <p class="text-sm text-slate-500">Notifications</p>
+
+                    <h3 class="text-3xl font-bold text-slate-800 mt-2">2</h3></a>
+                </section>
+
+
+            <!-- Next Appointment -->
+            <section class="bg-indigo-950 text-white rounded-2xl p-6 mb-8">
+
+                <p class="text-indigo-200 text-sm">Next Appointment</p>
+
+                <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-5 mt-3">
+
+                    <div>
+
+                        <h3 class="text-2xl font-bold">Dr. Sarah Johnson</h3>
+
+                        <p class="text-indigo-200 mt-1">Ophthalmology</p>
+
+                    </div>
+
+
+                    <div>
+
+                        <p class="font-semibold">September 20, 2026</p>
+
+                        <p class="text-indigo-200">10:00 AM</p>
+
+                    </div>
+
+
+                    <a href="appointment.html" class="inline-block bg-white text-indigo-950 px-5 py-3 rounded-xl font-semibold hover:bg-indigo-100 transition text-center">View Appointment</a>
+
+                </div>
+
+            </section>
+
+
+            <!-- Quick Actions -->
+            <section>
+
+                <h2 class="text-xl font-bold text-slate-800 mb-5">Quick Actions</h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+
+                    <a href="appointment.html" class="bg-white border border-slate-200 rounded-2xl p-6 text-left hover:shadow-md transition">
+
+                        <h3 class="font-bold text-slate-800">Book Appointment</h3>
+
+                        <p class="text-sm text-slate-500 mt-2">Schedule an appointment with a doctor.</p></a>
+
+
+                    <a href="medical-record.html"class="bg-white border border-slate-200 rounded-2xl p-6 text-left hover:shadow-md transition">
+
+                        <h3 class="font-bold text-slate-800">View Medical Records</h3>
+
+                        <p class="text-sm text-slate-500 mt-2">Access your medical history and records.</p>
+                    </a>
+
+
+                    <a href="document.html" class="bg-white border border-slate-200 rounded-2xl p-6 text-left hover:shadow-md transition">
+
+                        <h3 class="font-bold text-slate-800">Upload Document</h3>
+
+                        <p class="text-sm text-slate-500 mt-2">Upload medical documents to your account.</p>
+                    </a>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+    <!-- Footer -->
+    <footer class="bg-indigo-950 text-white">
+
+        <div class="max-w-7xl mx-auto px-6 py-5 text-center">
+
+            <p class="text-sm text-indigo-200">
+                © 2026 VISION CLINIC. All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+</body>
+</html>

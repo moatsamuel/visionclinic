@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title> {% block title %} VISION CLINIC | Patient Management System {% endblock %} </title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-slate-50">
+
+    <!-- Header -->
+    <header class="bg-indigo-950 text-white">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+
+            <!-- Clinic Logo -->
+            <div>
+                <h1 class="text-2xl font-bold tracking-wide">VISION CLINIC</h1>
+                <p class="text-indigo-200 text-sm">Better Health. Better Life.</p>
+            </div>
+
+            <!-- Authentication Buttons -->
+            <div class="flex items-center gap-3">
+
+            <a href="/login" class="border border-white text-white px-5 py-2 rounded-xl font-medium hover:bg-white hover:text-indigo-950 transition">Login</a>
+
+            <a href="/register" class="bg-white text-indigo-950 px-5 py-2 rounded-xl font-medium hover:bg-indigo-100 transition">Register</a>
+        </div>
+
+        </div>
+     
+    </header>
+    {% block maincontent %}
+    <!-- Sidebar -->
+    <aside class="w-64 bg-white border-r border-slate-200 p-5 hidden md:block">
+
+        <div class="mb-8">
+            <p class="text-xs text-slate-400 uppercase tracking-wider">
+                Main Menu
+            </p>
+        </div>
+
+        <nav class="space-y-2">
+
+            <a href="/" class="block text-slate-600 hover:bg-slate-100 rounded-xl px-4 py-3">Homepage</a>
+            <a href="/doctors" class="block text-slate-600 hover:bg-slate-100 rounded-xl px-4 py-3">Doctors</a>
+            <a href="/specialty" class="block text-slate-600 hover:bg-slate-100 rounded-xl px-4 py-3">Specialties</a>
+            <a href="/contact" class="block text-slate-600 hover:bg-slate-100 rounded-xl px-4 py-3">Contact </a>
+        </nav>
+
+        <!-- Logout -->
+        <div class="border-t border-slate-200 mt-8 pt-5">
+
+            <a href="/login" class="block text-red-500 hover:bg-red-50 rounded-xl px-4 py-3">
+                Logout
+            </a>
+
+        </div>
+
+    </aside>
+    {% endblock %}
+
+
+</div>
+<!-- Footer -->
+    <footer class="bg-indigo-950 text-white mt-10">
+        <div class="max-w-7xl mx-auto px-6 py-6 text-center">
+            <p class="text-sm text-indigo-200">© 2026 VISION CLINIC. All rights reserved.</p>
+
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Doctor Dashboard | VISION CLINIC</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-slate-50">
+
+    <!-- Header -->
+    <header class="bg-indigo-950 text-white">
+
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+
+            <div>
+                <h1 class="text-2xl font-bold">VISION CLINIC</h1>
+
+                <p class="text-indigo-200 text-sm">Doctor Portal</p>
+            </div>
+
+            <div class="flex items-center gap-3">
+
+                <div class="text-right hidden sm:block">
+                    <p class="font-semibold">Dr. Sarah Johnson</p>
+
+                    <p class="text-indigo-200 text-sm">Ophthalmologist</p>
+                </div>
+
+                <div class="w-10 h-10 bg-indigo-500 rounded-full flex items-center justify-center font-bold">S
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- Main Layout -->
+    <div class="flex min-h-screen">
+
+        <!-- Sidebar -->
+        <aside class="w-64 bg-white border-r border-slate-200 p-4 hidden md:block">
+
+            <p class="text-xs text-slate-400 uppercase tracking-wider mb-4">Doctor Menu</p>
+
+            <nav class="space-y-1">
+            <a href="/" class="block text-slate-600 hover:bg-slate-100 rounded-xl px-4 py-3">Homepage</a>
+            <a href="/doctors" class="block text-slate-600 hover:bg-slate-100 rounded-xl px-4 py-3">Doctors</a>
+            <a href="/specialty" class="block text-slate-600 hover:bg-slate-100 rounded-xl px-4 py-3">Specialties</a>
+            <a href="/contact" class="block text-slate-600 hover:bg-slate-100 rounded-xl px-4 py-3">Contact </a>    
+            </nav>
+            <!-- Logout -->
+            <div class="border-t border-slate-200 mt-5 pt-4">
+
+                <a href="/login" class="block text-red-500 hover:bg-red-50 rounded-lg px-4 py-2.5 transition">Logout</a>
+            </div>
+
+        </aside>
+
+
+        <!-- Doctor Content -->
+        <main class="flex-1 p-5 md:p-6">
+
+            <!-- Welcome -->
+            <section class="mb-5">
+
+                <h2 class="text-3xl font-bold text-slate-800">Good Morning, Dr. Sarah 👋</h2>
+
+                <p class="text-slate-500 mt-1">Here's an overview of your activities today.</p>
+            </section>
+
+
+            <!-- Summary Cards -->
+            <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-5">
+
+                <a href="/appointment" class="bg-white border border-slate-200 rounded-xl p-4 hover:shadow-md transition">
+
+                    <p class="text-sm text-slate-500">Today's Appointments</p>
+
+                    <h3 class="text-3xl font-bold text-slate-800 mt-1">8</h3></a>
+
+
+                <a href="/patient" class="bg-white border border-slate-200 rounded-xl p-4 hover:shadow-md transition">
+
+                    <p class="text-sm text-slate-500">Total Patients</p>
+
+                    <h3 class="text-3xl font-bold text-slate-800 mt-1">124</h3></a>
+                <a href="/appointment" class="bg-white border border-slate-200 rounded-xl p-4 hover:shadow-md transition">
+
+                    <p class="text-sm text-slate-500">Pending Appointments</p>
+
+                    <h3 class="text-3xl font-bold text-slate-800 mt-1">4</h3></a>
+                    <a href="/notification" class="bg-white border border-slate-200 rounded-xl p-4 hover:shadow-md transition">
+
+                    <p class="text-sm text-slate-500"> Notifications</p>
+
+                    <h3 class="text-3xl font-bold text-slate-800 mt-1">6</h3></a>
+                </section>
+
+
+            <!-- Today's Appointments -->
+            <section class="bg-white border border-slate-200 rounded-xl p-5 mb-5">
+
+                <div class="flex items-center justify-between mb-4">
+
+                    <div>
+                        <h2 class="text-xl font-bold text-slate-800">Today's Appointments</h2>
+
+                        <p class="text-sm text-slate-500 mt-1">Your scheduled patients</p>
+                    </div>
+
+                    <a href="/appointment" class="text-indigo-700 font-medium hover:text-indigo-900">View All</a>
+                </div>
+
+
+                <!-- Patient 1 -->
+                <div class="border border-slate-200 rounded-lg p-3 mb-3">
+
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+
+                        <div>
+                            <h3 class="font-semibold text-slate-800">Peace Ajah</h3>
+
+                            <p class="text-sm text-slate-500">Routine Eye Examination</p>
+                        </div>
+
+                        <div>
+                            <p class="text-sm font-medium text-slate-700">10:00 AM</p>
+
+                            <p class="text-sm text-slate-500">Patient #001</p>
+                        </div>
+
+                        <span class="bg-green-100 text-green-700 px-3 py-1.5 rounded-full text-sm font-medium">Confirmed</span>
+                    </div>
+
+                </div>
+
+
+                <!-- Patient 2 -->
+                <div class="border border-slate-200 rounded-lg p-3 mb-3">
+
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+
+                        <div>
+                            <h3 class="font-semibold text-slate-800">David Okafor</h3>
+
+                            <p class="text-sm text-slate-500">Cataract Consultation</p>
+                        </div>
+
+                        <div>
+                            <p class="text-sm font-medium text-slate-700">11:30 AM</p>
+
+                            <p class="text-sm text-slate-500">Patient #002</p>
+                        </div>
+
+                        <span class="bg-yellow-100 text-yellow-700 px-3 py-1.5 rounded-full text-sm font-medium">Pending</span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Patient 3 -->
+                <div class="border border-slate-200 rounded-lg p-3">
+
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+
+                        <div>
+                            <h3 class="font-semibold text-slate-800">Mary Johnson</h3>
+
+                            <p class="text-sm text-slate-500">Glaucoma Review</p>
+                        </div>
+
+                        <div>
+                            <p class="text-sm font-medium text-slate-700">2:00 PM</p>
+
+                            <p class="text-sm text-slate-500">Patient #003</p>
+                        </div>
+
+                        <span class="bg-green-100 text-green-700 px-3 py-1.5 rounded-full text-sm font-medium">Confirmed</span>
+
+                    </div>
+
+                </div>
+
+            </section>
+            <!-- Quick Actions -->
+            <section>
+
+                <h2 class="text-xl font-bold text-slate-800 mb-4">Quick Action</h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+
+                    <a href="/patient" class="bg-white border border-slate-200 rounded-xl p-5 text-left hover:shadow-md transition">
+
+                        <h3 class="font-bold text-slate-800">View Patients</h3>
+
+                        <p class="text-sm text-slate-500 mt-1">View and manage your patients.</p>
+
+                    </a>
+
+
+                    <a href="/medical" class="bg-white border border-slate-200 rounded-xl p-5 text-left hover:shadow-md transition">
+
+                        <h3 class="font-bold text-slate-800">Update Medical Record</h3>
+
+                        <p class="text-sm text-slate-500 mt-1">Add or update patient medical information.</p>
+                    </a>
+
+
+                    <a href="/document" class="bg-white border border-slate-200 rounded-xl p-5 text-left hover:shadow-md transition">
+
+                        <h3 class="font-bold text-slate-800">Upload Document</h3>
+
+                        <p class="text-sm text-slate-500 mt-1">Upload reports and medical documents</p>
+                    </a>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+    <!-- Footer -->
+    <footer class="bg-indigo-950 text-white">
+
+        <div class="max-w-7xl mx-auto px-6 py-4 text-center">
+
+            <p class="text-sm text-indigo-200">
+                © 2026 VISION CLINIC. All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+</body>
+</html>
