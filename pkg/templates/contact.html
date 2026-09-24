@@ -8,21 +8,6 @@
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.css"/>
-
-    <style>
-        .header{
-            font-size: 30px;
-        }
-
-        .email{
-            font-size: 18px;
-        }
-
-        .name{
-            font-size: 18px
-        }
-    </style>
 </head>
 
 <body class="bg-slate-50">
@@ -43,36 +28,124 @@
             <a href="/login" class="border border-white text-white px-5 py-2 rounded-xl font-medium hover:bg-white hover:text-indigo-950 transition">Login</a>
 
             <a href="/register" class="bg-white text-indigo-950 px-5 py-2 rounded-xl font-medium hover:bg-indigo-100 transition">Register</a>
-            </div>
+        </div>
+
         </div>
     </header>
-
     <!-- Main Content -->
-    <main>
-        <div class="row d-flex justify-content-center align-items-center">
-           <div class="col-5 mb-200">
-              <h1 class="text-center header">Register form</h1>
-             <form action="" method="post">
-                <div class="name">
-                    <label for="user">Name:</label>
-                   <input type="text" class="form-control" placeholder="Enter your name" name="user"> 
-                </div>
-                <div class="email mt-2">
-                    <label for="email">Email:</label>
-                   <input type="email" class="form-control" placeholder="Enter your email" name="email"> 
-                </div>
-                <div class="mt-2">
-                   <label for="text">Enter description:</label>
-                   <input type="text" class="form-control" placeholder="Enter your description:" name="text"> 
-                </div>
-                <div class="text-center mt-3">
-                   <button class="w-100 bg-indigo-950 text-white rounded py-2">Submit Details</button>
-                </div>
-             </form> 
-           </div> 
-        </div>
-    </main>
+<div class="flex min-h-screen">
 
+    <!-- Sidebar -->
+    <aside class="w-64 bg-white border-r border-slate-200 p-5 hidden md:block">
+
+        <div class="mb-8">
+            <p class="text-xs text-slate-400 uppercase tracking-wider">
+                Main Menu
+            </p>
+        </div>
+
+        <nav class="space-y-2">
+
+            <a href="/" class="block text-slate-600 hover:bg-slate-100 rounded-xl px-4 py-3">Homepage</a>
+            <a href="/doctor" class="block text-slate-600 hover:bg-slate-100 rounded-xl px-4 py-3">Doctors</a>
+            <a href="/specialty" class="block text-slate-600 hover:bg-slate-100 rounded-xl px-4 py-3">Specialties</a>
+            <a href="/contact" class="block text-slate-600 hover:bg-slate-100 rounded-xl px-4 py-3">Contact </a>
+        </nav>
+
+        <!-- Logout -->
+        <div class="border-t border-slate-200 mt-8 pt-5">
+
+            <a href="/login" class="block text-red-500 hover:bg-red-50 rounded-xl px-4 py-3">
+                Logout
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- Dashboard Content -->
+    <main class="flex-1 px-6 py-8">
+
+        <!-- Welcome Section -->
+        <section class="mb-8">
+
+           <h2 class="text-2xl font-bold text-slate-800 text-center">
+                Contact Us
+            </h2>
+            <p class="text-slate-500 text-center mt-2 mb-7">
+                Send us a message and our team will get in touch with you as soon as possible 
+            </p>
+
+        </section>
+
+        <!-- Summary Cards --> 
+<section class=" mb-8 text-center" >
+
+            <form>
+                <!-- Full Name -->
+                <div class="mb-5">
+                    <label class="block text-sm font-medium text-slate-700 mb-2">
+                        Full Name
+                    </label>
+                    <input
+                        type="text"
+                        placeholder="Enter your full name"
+                        class="w-1/2 border border-slate-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                    >
+                </div>
+
+
+                <!-- Email -->
+                <div class="mb-5">
+                    <label class="block text-sm font-medium text-slate-700 mb-2">
+                        Email Address
+                    </label>
+                    <input
+                        type="email"
+                        placeholder="Enter your email"
+                        class="w-1/2 border border-slate-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                    > 
+                </div>
+
+
+                <!-- Phone -->
+                <div class="mb-5">
+                    <label class="block text-sm font-medium text-slate-700 mb-2">
+                        Phone Number
+                    </label>
+                    <input
+                        type="tel"
+                        placeholder="Enter your phone number"
+                        class="w-1/2 border border-slate-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                    >
+                </div>
+
+                <!-- Message area -->
+                <div class="mb-6" >
+                    <label class="block text-sm font-medium text-slate-700 mb-2">
+                        Message
+                    </label>
+                    <input type="textarea" placeholder="Enter your message Here" class="h-48 w-1/2 border border-slate-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-indigo-500 "
+                    >
+                </div>
+
+
+
+
+                <!-- Send Button -->
+                <button
+                    type="submit"
+                    class="w-1/2 bg-indigo-950 text-white py-3 rounded-xl font-semibold hover:bg-indigo-900 transition"
+                >
+                    Send Message
+                </button>
+            </form>
+</section>
+
+</main>
+
+</div>
 <!-- Footer -->
     <footer class="bg-indigo-950 text-white mt-10">
         <div class="max-w-7xl mx-auto px-6 py-6 text-center">
