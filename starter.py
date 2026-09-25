@@ -1,7 +1,7 @@
-
+import os
 from pkg import app
 if __name__ == ("__main__"):
-    app.run(debug=1, port=7000)
+    app.run(debug=os.getenv('DEBUG'), port=os.getenv('PORT'))
     
     
     
