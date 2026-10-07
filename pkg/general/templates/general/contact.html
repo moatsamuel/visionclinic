@@ -1,0 +1,89 @@
+{% extends 'users/master.html' %}
+
+{% block title %}
+Documentation
+{% endblock %}
+
+{%block maincontent%}
+
+    <!-- Dashboard Content -->
+    <main class="flex-1 p-8">
+
+        <!-- Welcome Section -->
+        
+
+           <h2 class="text-2xl font-bold text-slate-800 text-center">
+                Contact Us
+            </h2>
+            <p class="text-slate-500 text-center mt-2 mb-7">
+                Send us a message and our team will get in touch with you as soon as possible 
+            </p>
+
+        
+
+        <!-- Summary Cards --> 
+        <section class=" mb-8 text-center" >
+
+            <form>
+                <!-- Full Name -->
+                <div class="mb-5">
+                    <label class="block text-sm font-medium text-slate-700 mb-2">
+                        Full Name
+                    </label>
+                    <input
+                        type="text"
+                        placeholder="Enter your full name"
+                        class="w-1/2 border border-slate-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                    >
+                </div>
+
+
+                <!-- Email -->
+                <div class="mb-5">
+                    <label class="block text-sm font-medium text-slate-700 mb-2">
+                        Email Address
+                    </label>
+                    <input
+                        type="email"
+                        placeholder="Enter your email"
+                        class="w-1/2 border border-slate-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                    > 
+                </div>
+
+
+                <!-- Phone -->
+                <div class="mb-5">
+                    <label class="block text-sm font-medium text-slate-700 mb-2">
+                        Phone Number
+                    </label>
+                    <input
+                        type="tel"
+                        placeholder="Enter your phone number"
+                        class="w-1/2 border border-slate-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                    >
+                </div>
+
+                <!-- Message area -->
+                <div class="mb-6" >
+                    <label class="block text-sm font-medium text-slate-700 mb-2">
+                        Message
+                    </label>
+                    <input type="textarea" placeholder="Enter your message Here" class="h-48 w-1/2 border border-slate-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-indigo-500 "
+                    >
+                </div>
+
+
+
+
+                <!-- Send Button -->
+                <button
+                    type="submit"
+                    class="w-1/2 bg-indigo-950 text-white py-3 rounded-xl font-semibold hover:bg-indigo-900 transition"
+                >
+                    Send Message
+                </button>
+            </form>
+        </section>
+
+    </main>
+ {%endblock%}

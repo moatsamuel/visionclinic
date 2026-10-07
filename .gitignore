@@ -5,8 +5,12 @@ visionenv
 
 .env
 
-!pkg/
-pkg/*
-!pkg/doctors/
-pkg/doctors/*
-!pkg/doctors/routes.py
+
+
+
+
+!migrations/
+migrations/*
+!migrations/versions/
+migrations/versions/*
+!migrations/versions/6054bc4c0814_.py

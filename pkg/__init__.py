@@ -10,6 +10,7 @@ db = SQLAlchemy()
 from pkg.general.routes import general
 from pkg.doctors.routes import doctor
 from pkg.specialty.routes import specialty
+from pkg.users.routes import user
 
 
 
@@ -26,6 +27,7 @@ def create_app():
     app.register_blueprint(general)
     app.register_blueprint(doctor)
     app.register_blueprint(specialty)
+    app.register_blueprint(user)
     
 
     db.init_app(app)

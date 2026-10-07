@@ -1,0 +1,177 @@
+{% extends 'general/master.html' %}
+
+{% block title %}
+Medical Records
+{% endblock %}
+
+{%block maincontent%}
+        <!-- Main Content -->
+        <main class="flex-1 p-8">
+
+            <!-- Heading -->
+            <div class="mb-8">
+
+                <h2 class="text-3xl font-bold text-slate-800">
+                    Medical Records
+                </h2>
+
+                <p class="text-slate-500 mt-1">
+                    View your medical history and clinical information.
+                </p>
+
+            </div>
+
+
+            <!-- Patient Information -->
+            <div class="bg-white rounded-2xl p-6 shadow-sm mb-8">
+
+                <h3 class="text-xl font-bold text-slate-800 mb-5">
+                    Patient Information
+                </h3>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+                    <div>
+                        <p class="text-sm text-slate-500">Full Name</p>
+                        <p class="font-semibold text-slate-800 mt-1">
+                            Peace Ajah
+                        </p>
+                    </div>
+
+                    <div>
+                        <p class="text-sm text-slate-500">Patient ID</p>
+                        <p class="font-semibold text-slate-800 mt-1">
+                            VC-001
+                        </p>
+                    </div>
+
+                    <div>
+                        <p class="text-sm text-slate-500">Date of Birth</p>
+                        <p class="font-semibold text-slate-800 mt-1">
+                            January 15, 2000
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Medical History -->
+            <div class="bg-white rounded-2xl p-6 shadow-sm mb-8">
+
+                <h3 class="text-xl font-bold text-slate-800 mb-6">
+                    Medical History
+                </h3>
+
+
+                <div class="space-y-6">
+
+                    <!-- Record 1 -->
+                    <div class="border border-slate-200 rounded-xl p-5">
+
+                        <div class="flex justify-between items-start">
+
+                            <div>
+                                <h4 class="font-bold text-slate-800">
+                                    General body Examination
+                                </h4>
+
+                                <p class="text-sm text-slate-500 mt-1">
+                                    Dr. Sarah Johnson • Ophthalmology
+                                </p>
+                            </div>
+
+                            <span class="text-sm text-slate-500">
+                                Sept 10, 2026
+                            </span>
+
+                        </div>
+
+                        <p class="text-slate-600 mt-4">
+                            Routine examination completed. Patient's health was assessed and general health was reviewed.
+                        </p>
+                    </div>
+
+
+                    <!-- Record 2 -->
+                    <div class="border border-slate-200 rounded-xl p-5">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h4 class="font-bold text-slate-800">
+                                    Antenatal  Assessment
+                                </h4>
+
+                                <p class="text-sm text-slate-500 mt-1">
+                                    Dr. Michael Okoro • Optometry
+                                </p>
+                            </div>
+
+                            <span class="text-sm text-slate-500">
+                                Aug 18, 2026
+                            </span>
+
+                        </div>
+
+                        <p class="text-slate-600 mt-4">
+                            Comprehensive Antenatal assessment completed with recommendations for regulatr eye checks.
+                        </p>
+
+                    </div>
+
+
+                    <!-- Record 3 -->
+                    <div class="border border-slate-200 rounded-xl p-5">
+
+                        <div class="flex justify-between items-start">
+
+                            <div>
+                                <h4 class="font-bold text-slate-800">
+                                    Follow-up Consultation
+                                </h4>
+
+                                <p class="text-sm text-slate-500 mt-1">
+                                    Dr. Emily Williams • Pediatric Eye Care
+                                </p>
+                            </div>
+
+                            <span class="text-sm text-slate-500">
+                                July 22, 2026
+                            </span>
+
+                        </div>
+
+                        <p class="text-slate-600 mt-4">
+                            Follow-up consultation completed and patient advised to maintain regular appointments.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Doctor Notes -->
+            <div class="bg-white rounded-2xl p-6 shadow-sm">
+
+                <h3 class="text-xl font-bold text-slate-800 mb-5">
+                    Doctor's Notes
+                </h3>
+
+                <div class="bg-indigo-50 border border-indigo-100 rounded-xl p-5">
+
+                    <p class="text-slate-700">
+                        Continue regular eye examinations and report any sudden changes in vision to the clinic.
+                    </p>
+
+                    <p class="text-sm text-slate-500 mt-3">
+                        — Dr. Sarah Johnson
+                    </p>
+
+                </div>
+
+            </div>
+
+        </main>
+{%endblock%}

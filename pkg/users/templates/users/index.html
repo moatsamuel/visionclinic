@@ -1,0 +1,74 @@
+{% extends 'users/master.html' %}
+
+{% block title %}
+User Homepage
+{% endblock %}
+
+{%block maincontent%}
+    <!-- Dashboard Content -->
+    <main class="flex-1 px-6 py-8">
+
+        <!-- Welcome Section -->
+        <section class="mb-8">
+
+            <h2 class="text-3xl font-bold text-slate-800">
+                Welcome {{ user.first_name }} {{user.last_name}} 
+            </h2>
+
+            <p class="text-slate-500 mt-2">
+                Manage your appointments, medical records and documents easily.
+            </p>
+
+        </section>
+
+        <!-- Summary Cards --> 
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+
+    <!-- Appointments -->
+    <a href="{{url_for('general.specialties')}}" class="block bg-white rounded-2xl shadow-sm p-6 border border-slate-200 hover:shadow-md hover:-translate-y-1 transition"><p class="text-slate-500 text-sm">Appointments</p>
+        <h3 class="text-3xl font-bold text-slate-800 mt-2">3</h3>
+        <p class="text-sm text-indigo-600 mt-2">Upcoming appointments</p></a>
+
+    <!-- Doctors -->
+    <a href="{{url_for('general.doctors')}}" class="block bg-white rounded-2xl shadow-sm p-6 border border-slate-200 hover:shadow-md hover:-translate-y-1 transition"><p class="text-slate-500 text-sm">Doctors</p>
+        <h3 class="text-3xl font-bold text-slate-800 mt-2">12</h3>
+        <p class="text-sm text-indigo-600 mt-2">Available doctors</p></a>
+
+    <!-- Documents -->
+    <a href="{{url_for('general.document')}}" class="block bg-white rounded-2xl shadow-sm p-6 border border-slate-200 hover:shadow-md hover:-translate-y-1 transition"><p class="text-slate-500 text-sm">Documents</p>
+        <h3 class="text-3xl font-bold text-slate-800 mt-2">8</h3>
+        <p class="text-sm text-indigo-600 mt-2">Medical documents</p></a>
+
+    <!-- Medical Records -->
+    <a href="{{url_for('user.medical_record')}}" class="block bg-white rounded-2xl shadow-sm p-6 border border-slate-200 hover:shadow-md hover:-translate-y-1 transition"><p class="text-slate-500 text-sm">Medical Records</p>
+        <h3 class="text-3xl font-bold text-slate-800 mt-2">5</h3>
+        <p class="text-sm text-indigo-600 mt-2">Available records</p></a>
+
+</section>
+<!-- Quick Actions -->
+        <section class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6">
+
+            <h2 class="text-xl font-bold text-slate-800 mb-5">Quick Actions</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+
+                <!-- Book Appointment -->
+        <a href="{{url_for('user.book')}}" class="block bg-indigo-950 text-white rounded-xl px-5 py-4 text-left hover:bg-indigo-900 transition"><span class="text-lg font-semibold">Book Appointment</span>
+            <p class="text-indigo-200 text-sm mt-1">Schedule a visit with a doctor</p>
+        </a>
+        <!-- View Doctors -->
+        <a href="{{url_for('general.doctors')}}" class="block bg-slate-100 text-slate-800 rounded-xl px-5 py-4 text-left hover:bg-slate-200 transition"><span class="text-lg font-semibold">View Doctors</span>
+            <p class="text-slate-500 text-sm mt-1">Find available doctors</p>
+        </a>
+        <!-- Medical Records -->
+        <a href="{{url_for('user.medical_record')}}" class="block bg-slate-100 text-slate-800 rounded-xl px-5 py-4 text-left hover:bg-slate-200 transition"><span class="text-lg font-semibold">Medical Records
+        </span><p class="text-slate-500 text-sm mt-1">View your medical history</p>
+        </a>
+        <!-- Documents -->
+        <a href="{{url_for('user.medical_record')}}" class="block bg-slate-100 text-slate-800 rounded-xl px-5 py-4 text-left hover:bg-slate-200 transition"><span class="text-lg font-semibold">Documents</span>
+            <p class="text-slate-500 text-sm mt-1">Access your documents</p>
+        </a>
+    </div>
+</section>
+</main>
+
+{% endblock %}

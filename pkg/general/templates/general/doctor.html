@@ -1,0 +1,122 @@
+{% extends 'users/master.html' %}
+
+{% block title %}
+Doctors
+{% endblock %}
+
+{%block maincontent%}
+
+        <!-- Doctor Content -->
+        <main class="flex-1 p-5 md:p-6">
+
+            <!-- Welcome -->
+            <section class="mb-5">
+                <h2 class="text-3xl font-bold text-slate-800"> Below are the list of registered doctors </h2>
+                <p class="text-slate-500 mt-1"> Doctors </p>
+            </section>
+
+            <!-- Summary Cards -->
+            <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-5">
+                
+                <div class="bg-white border border-slate-200 rounded-xl p-4 hover:shadow-md transition">
+                    <p class="text-sm text-slate-500">Total Doctors:  </p>
+                    <h3 class="text-3xl font-bold text-slate-800 mt-1">{{doctors|length }}</h3>
+                </div>
+               
+
+              {#  <div class="bg-white border border-slate-200 rounded-xl p-4 hover:shadow-md transition">
+                    <p class="text-sm text-slate-500"> Active Doctors: </p>
+                    <h3 class="text-3xl font-bold text-slate-800 mt-1">124</h3>
+                </div>
+
+                <div class="bg-white border border-slate-200 rounded-xl p-4 hover:shadow-md transition">
+                    <p class="text-sm text-slate-500">Pending Appointments</p>
+                    <h3 class="text-3xl font-bold text-slate-800 mt-1">4</h3>
+                </div>
+
+                 <div class="bg-white border border-slate-200 rounded-xl p-4 hover:shadow-md transition">
+                    <p class="text-sm text-slate-500"> Notifications</p>
+                    <h3 class="text-3xl font-bold text-slate-800 mt-1">6</h3>
+                 </div>
+                 #}
+            </section>
+
+
+            <!-- Today's Appointments -->
+            <section class="bg-white border border-slate-200 rounded-xl p-5 mb-5">
+
+                <div class="flex items-center justify-between mb-4">
+
+                    <div>
+                        <h2 class="text-xl font-bold text-slate-800"> Our list of doctors available at vision clinic </h2>
+
+                        <p class="text-sm text-slate-500 mt-1">Your scheduled patients</p>
+                    </div>
+
+                    <a href="/appointment" class="text-indigo-700 font-medium hover:text-indigo-900">View All</a>
+                </div>
+
+
+                <!-- Doctor record -->
+                <div class="border border-slate-200 rounded-lg p-3 mb-3">
+                    {% for doctor in doctors %}
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+
+                        <div>
+                            <h3 class="font-semibold text-slate-800">{{ doctor.first_name }} - {{doctor.last_name}} </h3>
+                            <p class="text-sm text-slate-500"> {{doctor.specialties.name}} </p>
+                        </div>
+
+                        <div>
+                            <p class="text-sm font-medium text-slate-700"> {{doctor.licence_number}} </p>
+                            <p class="text-sm text-slate-500"> {{doctor.email}} </p>
+                        </div>
+
+                        <span class="bg- text-green-700 px-3 py-1.5 rounded-full text-sm font-medium"> {{doctor.availability}} </span>
+                    </div>
+                    {%endfor%}
+                </div>
+
+
+               
+
+            </section>
+            <!-- Quick Actions -->
+            <section>
+
+                <h2 class="text-xl font-bold text-slate-800 mb-4">Quick Action</h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+
+                    <a href="/patient" class="bg-white border border-slate-200 rounded-xl p-5 text-left hover:shadow-md transition">
+
+                        <h3 class="font-bold text-slate-800">View Patients</h3>
+
+                        <p class="text-sm text-slate-500 mt-1">View and manage your patients.</p>
+
+                    </a>
+
+
+                    <a href="/medical" class="bg-white border border-slate-200 rounded-xl p-5 text-left hover:shadow-md transition">
+
+                        <h3 class="font-bold text-slate-800">Update Medical Record</h3>
+
+                        <p class="text-sm text-slate-500 mt-1">Add or update patient medical information.</p>
+                    </a>
+
+
+                    <a href="/document" class="bg-white border border-slate-200 rounded-xl p-5 text-left hover:shadow-md transition">
+
+                        <h3 class="font-bold text-slate-800">Upload Document</h3>
+
+                        <p class="text-sm text-slate-500 mt-1">Upload reports and medical documents</p>
+                    </a>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    
+{%endblock%}

@@ -5,6 +5,10 @@ from werkzeug.security import generate_password_hash, check_password_hash
 
 doctor = Blueprint('doctors', __name__, template_folder='templates', static_folder='static', url_prefix='/doctor' )
 
+@doctor.route("/")
+def home():
+    return redirect(url_for('doctors.login'))
+
 @doctor.route("/login/", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
@@ -23,7 +27,7 @@ def login():
     return render_template("doctors/login.html")
 
 
-@doctor.route("/register", methods=["GET", "POST"])
+@doctor.route("/register/", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
         first_name = request.form.get("fname")
@@ -52,17 +56,8 @@ def register():
         db.session.add(account)
         db.session.flush()
 
-        doctor_record = Doctor(
-            first_name=first_name,
-            last_name=last_name,
-            email=email,
-            phone=phone,
-            specialty_id=specialty_id,
-            availability=availability,
-            licence_number=licence_number,
-            password_hash=doc_pass,
-            user_id=account.user_id,
-        )
+        doctor_record = Doctor(first_name=first_name, last_name=last_name, email=email, phone=phone, specialty_id=specialty_id, availability=availability, licence_number=licence_number, password_hash=doc_pass, user_id=account.user_id,)
+        
         db.session.add(doctor_record)
         db.session.commit()
 
@@ -70,13 +65,12 @@ def register():
 
     return render_template("doctors/register.html")
 
-@doctor.route("/dashboard")
+@doctor.route("/dashboard/")
 def dashboard():
     if session.get('activeuser') != None:
         doctors = Doctor.query.all()
         doc_email = session.get('activeuser')
         doctor = Doctor.query.filter_by(email=doc_email).first()
-        
         
         return render_template("doctors/doctor.html", doctors=doctors, doc=doctor )
     
